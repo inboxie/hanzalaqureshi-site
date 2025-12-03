@@ -13,7 +13,6 @@ export default function Navigation() {
     { href: "/write", label: "Write" },
     { href: "/saudi", label: "Saudi" },
     { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
   ];
 
   return (
