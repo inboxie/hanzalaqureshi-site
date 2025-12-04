@@ -49,14 +49,17 @@ export default function Write() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <div className="max-w-5xl mx-auto px-6">
-        <section className="py-20">
-          <Link href="/" className="text-blue-600 dark:text-blue-400 hover:underline mb-8 inline-block font-medium">
+      <section className="py-20">
+          <Link 
+            href="/"
+            className="text-blue-600 dark:text-blue-400 hover:underline mb-8 inline-block font-medium"
+          >
             Back to Home
           </Link>
 
           <h1 className="text-5xl font-bold mb-6 text-gray-900 dark:text-white">Writing</h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl leading-relaxed">
-            Insights on data, AI, productivity, and navigating life as a tech professional in Saudi Arabia.
+            Insights on data, AI, productivity, and navigating life as a tech professional in Saudi Arabia. <span className="font-semibold text-gray-900 dark:text-white">100,000+ views</span>.
           </p>
         </section>
 
