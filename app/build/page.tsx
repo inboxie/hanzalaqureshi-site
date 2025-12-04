@@ -32,7 +32,7 @@ export default function Build() {
               <div className="text-sm text-green-600 dark:text-green-400 font-medium mb-2">
                 🟢 ACTIVE
               </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Inboxie</h3>
+              <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">inboxie</h3>
               <p className="text-sm text-gray-500 dark:text-gray-500 mb-3">
                 AI Gmail Chrome Extension
               </p>
@@ -45,12 +45,12 @@ export default function Build() {
                 rel="noopener noreferrer"
                 className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all font-medium text-sm shadow-sm hover:shadow-md"
               >
-                Visit Inboxie.ai
+                Visit inboxie.ai
               </a>
             </div>
 
             {/* CanvasKit */}
-            <div className="group">
+              <div className="group">
               <div className="aspect-[4/3] bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-2xl mb-4 flex items-center justify-center">
                 <div className="text-6xl">🎨</div>
               </div>
@@ -59,14 +59,19 @@ export default function Build() {
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">CanvasKit</h3>
               <p className="text-sm text-gray-500 dark:text-gray-500 mb-3">
-                AI Marketing Adaptation Tool
+                Figma Plugin
               </p>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                Upload copy or visuals and automatically generate multiple versions tailored for different channels.
+                AI-powered tool for creating fast marketing adaptations. Generate multiple versions tailored for different channels.
               </p>
-              <div className="text-sm text-gray-500 dark:text-gray-500 italic">
-                Testing internal prototypes
-              </div>
+              <a 
+                href="https://github.com/inboxie/CanvasKit" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block border-2 border-gray-300 dark:border-gray-600 px-4 py-2 rounded-full hover:border-blue-600 dark:hover:border-blue-400 transition-all font-medium text-sm"
+              >
+                View Code
+              </a>
             </div>
 
             {/* AI Outbound Survey Agent */}
@@ -74,8 +79,8 @@ export default function Build() {
               <div className="aspect-[4/3] bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-2xl mb-4 flex items-center justify-center">
                 <div className="text-6xl">📞</div>
               </div>
-              <div className="text-sm text-blue-600 dark:text-blue-400 font-medium mb-2">
-                IN DEVELOPMENT
+              <div className="text-sm text-green-600 dark:text-green-400 font-medium mb-2">
+                🟢 ACTIVE
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">AI Outbound Survey Agent</h3>
               <p className="text-sm text-gray-500 dark:text-gray-500 mb-3">
@@ -84,8 +89,23 @@ export default function Build() {
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
                 Groq-powered ultra-low latency voice agent for customer surveys, lead qualification, and feedback automation.
               </p>
-              <div className="text-sm text-gray-500 dark:text-gray-500 italic">
-                Early research & prototyping
+              <div className="flex flex-wrap gap-2">
+                <a 
+                  href="https://voice-bot-grievance-survey.vercel.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all font-medium text-sm shadow-sm hover:shadow-md"
+                >
+                  Try Demo
+                </a>
+                <a 
+                  href="https://github.com/inboxie/voice-bot-grievance-survey" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block border-2 border-gray-300 dark:border-gray-600 px-4 py-2 rounded-full hover:border-blue-600 dark:hover:border-blue-400 transition-all font-medium text-sm"
+                >
+                  View Code
+                </a>
               </div>
             </div>
 
@@ -106,6 +126,41 @@ export default function Build() {
               </p>
             </div>
           </div>
+
+          {/* SearchEmbeddingHP */}
+          <div className="group">
+              <div className="aspect-[4/3] bg-gradient-to-br from-indigo-50 to-indigo-100 dark:from-indigo-900/20 dark:to-indigo-800/20 rounded-2xl mb-4 flex items-center justify-center">
+                <div className="text-6xl">🔍</div>
+              </div>
+              <div className="text-sm text-gray-500 dark:text-gray-500 font-medium mb-2">
+                TUTORIAL
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">AI Document Search</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-500 mb-3">
+                Semantic Search Tool
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                AI-powered document search using semantic embeddings, Pinecone, and OpenAI API for intelligent content retrieval.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a 
+                  href="https://medium.com/@hanzalaqureshi/the-5-simple-steps-to-create-a-powerful-ai-driven-document-search-tool-ecd502fa6637" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all font-medium text-sm shadow-sm hover:shadow-md"
+                >
+                  Read Article
+                </a>
+                <a 
+                  href="https://github.com/hanzalaqureshi/SearchEmbeddingHP" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block border-2 border-gray-300 dark:border-gray-600 px-4 py-2 rounded-full hover:border-blue-600 dark:hover:border-blue-400 transition-all font-medium text-sm"
+                >
+                  View Code
+                </a>
+              </div>
+            </div>
         </section>
 
         {/* Digital Products Section */}
