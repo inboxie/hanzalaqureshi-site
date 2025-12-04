@@ -10,7 +10,7 @@ export default function Build() {
             href="/"
             className="text-blue-600 dark:text-blue-400 hover:underline mb-8 inline-block font-medium"
           >
-            ← Back to Home
+            Back to Home
           </Link>
 
           <h1 className="text-5xl font-bold mb-6 text-gray-900 dark:text-white">Products</h1>
@@ -50,7 +50,7 @@ export default function Build() {
             </div>
 
             {/* CanvasKit */}
-              <div className="group">
+            <div className="group">
               <div className="aspect-[4/3] bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-2xl mb-4 flex items-center justify-center">
                 <div className="text-6xl">🎨</div>
               </div>
@@ -109,26 +109,33 @@ export default function Build() {
               </div>
             </div>
 
-            {/* Data & AI Scoring */}
-            <div className="group opacity-60">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800/20 dark:to-gray-700/20 rounded-2xl mb-4 flex items-center justify-center">
+              {/* Data & AI Scoring */}
+              <div className="group">
+              <div className="aspect-[4/3] bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/20 dark:to-teal-800/20 rounded-2xl mb-4 flex items-center justify-center">
                 <div className="text-6xl">📊</div>
               </div>
-              <div className="text-sm text-gray-500 dark:text-gray-500 font-medium mb-2">
-                ARCHIVED
+              <div className="text-sm text-green-600 dark:text-green-400 font-medium mb-2">
+                🟢 ACTIVE
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Data & AI Scoring</h3>
               <p className="text-sm text-gray-500 dark:text-gray-500 mb-3">
-                Readiness Assessment Tool
+                Data Maturity Assessment
               </p>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                Prototype scoring system for evaluating organizational data strategy and AI capability readiness.
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                Interactive assessment tool for evaluating your organization's data strategy, governance, and AI capability readiness.
               </p>
+              <a 
+                href="https://datamasteryindex.scoreapp.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all font-medium text-sm shadow-sm hover:shadow-md"
+              >
+                Try Assessment
+              </a>
             </div>
-          </div>
 
-          {/* SearchEmbeddingHP */}
-          <div className="group">
+            {/* SearchEmbeddingHP */}
+            <div className="group">
               <div className="aspect-[4/3] bg-gradient-to-br from-indigo-50 to-indigo-100 dark:from-indigo-900/20 dark:to-indigo-800/20 rounded-2xl mb-4 flex items-center justify-center">
                 <div className="text-6xl">🔍</div>
               </div>
@@ -161,6 +168,7 @@ export default function Build() {
                 </a>
               </div>
             </div>
+          </div>
         </section>
 
         {/* Digital Products Section */}
@@ -210,7 +218,7 @@ export default function Build() {
               href="/contact"
               className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all font-medium shadow-sm hover:shadow-md"
             >
-              Contact Me →
+              Contact Me
             </Link>
           </div>
         </section>
