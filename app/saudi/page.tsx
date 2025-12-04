@@ -13,13 +13,29 @@ interface Video {
 export default function Saudi() {
   const [videos, setVideos] = useState<Video[]>([]);
   const [loading, setLoading] = useState(true);
+  const [channelStats, setChannelStats] = useState({ views: '0', subscribers: 0 });
 
   useEffect(() => {
-    async function fetchYouTubeShorts() {
+    async function fetchYouTubeData() {
       try {
-        const channelId = "UC0XGbrjpSQbyCvR0fRLs5sA"; // @hanzinsaudi channel ID
+        const channelId = "UC0XGbrjpSQbyCvR0fRLs5sA";
         const apiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
         
+        // Fetch channel statistics
+        const channelResponse = await fetch(
+          `https://www.googleapis.com/youtube/v3/channels?key=${apiKey}&id=${channelId}&part=statistics`
+        );
+        const channelData = await channelResponse.json();
+        const stats = channelData.items?.[0]?.statistics;
+        
+        if (stats) {
+          setChannelStats({
+            views: parseInt(stats.viewCount).toLocaleString(),
+            subscribers: parseInt(stats.subscriberCount),
+          });
+        }
+        
+        // Fetch videos
         const response = await fetch(
           `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet&order=date&maxResults=6&type=video&videoDuration=short`
         );
@@ -29,19 +45,19 @@ export default function Saudi() {
         const formattedVideos = data.items?.map((item: any) => ({
           id: item.id.videoId,
           title: item.snippet.title,
-          thumbnail: item.snippet.thumbnails.medium.url,
+          thumbnail: item.snippet.thumbnails.high?.url || item.snippet.thumbnails.medium.url,
           url: `https://www.youtube.com/watch?v=${item.id.videoId}`,
         })) || [];
         
         setVideos(formattedVideos);
       } catch (error) {
-        console.error('Error fetching YouTube videos:', error);
+        console.error('Error fetching YouTube data:', error);
       } finally {
         setLoading(false);
       }
     }
 
-    fetchYouTubeShorts();
+    fetchYouTubeData();
   }, []);
 
   return (
@@ -68,8 +84,11 @@ export default function Saudi() {
                 YOUTUBE CHANNEL
               </p>
               <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">@hanzinsaudi</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400">
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">
                 50+ videos about life, career, housing, and opportunities in Saudi Arabia.
+              </p>
+              <p className="text-sm text-gray-500 dark:text-gray-500">
+                {channelStats.views} views • {channelStats.subscribers} subscribers
               </p>
             </div>
           </div>
@@ -100,16 +119,16 @@ export default function Saudi() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {videos.map((video) => (
                 <a key={video.id} href={video.url} target="_blank" rel="noopener noreferrer" className="group">
-                <div className="aspect-[9/16] bg-black rounded-2xl overflow-hidden relative">
-                  <img src={video.thumbnail} alt={video.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="text-sm font-semibold text-white line-clamp-2">
-                      {video.title}
-                    </h3>
+                  <div className="aspect-[9/16] bg-black rounded-2xl overflow-hidden relative">
+                    <img src={video.thumbnail} alt={video.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <h3 className="text-sm font-semibold text-white line-clamp-2">
+                        {video.title}
+                      </h3>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
               ))}
             </div>
           )}
