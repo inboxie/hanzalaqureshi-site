@@ -48,21 +48,21 @@ export default function Build() {
                 Visit inboxie.ai
               </a>
             </div>
-
+            
             {/* CanvasKit */}
-            <div className="group">
+              <div className="group">
               <div className="aspect-[4/3] bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-2xl mb-4 flex items-center justify-center">
                 <div className="text-6xl">🎨</div>
               </div>
-              <div className="text-sm text-blue-600 dark:text-blue-400 font-medium mb-2">
-                IN DEVELOPMENT
+              <div className="text-sm text-gray-500 dark:text-gray-500 font-medium mb-2">
+                OPEN SOURCE
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">CanvasKit</h3>
               <p className="text-sm text-gray-500 dark:text-gray-500 mb-3">
                 Figma Plugin
               </p>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                AI-powered tool for creating fast marketing adaptations. Generate multiple versions tailored for different channels.
+                AI-powered Figma plugin for marketing adaptations. Free to use and adapt for your own needs.
               </p>
               <a 
                 href="https://github.com/inboxie/CanvasKit" 
