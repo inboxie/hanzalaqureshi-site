@@ -75,6 +75,50 @@ export default function Saudi() {
         </section>
 
         <section className="py-16 border-t border-gray-100 dark:border-gray-800">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 border-2 border-blue-200 dark:border-blue-700 rounded-3xl p-12 text-center shadow-xl">
+            <div className="max-w-3xl mx-auto">
+              <div className="inline-block bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
+                FREE 3-MINUTE QUIZ
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white leading-tight">
+                Discover Your Best Path to Live & Work in Saudi Arabia
+              </h2>
+              
+              <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+                Take a free eligibility quiz to find out which Saudi work or residency pathway best matches your profile.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 max-w-2xl mx-auto">
+                <div className="flex items-center justify-center gap-2 text-gray-700 dark:text-gray-300 font-medium">
+                  <span className="text-2xl">✓</span>
+                  <span>Personalised recommendation</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-gray-700 dark:text-gray-300 font-medium">
+                  <span className="text-2xl">✓</span>
+                  <span>Instant result</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-gray-700 dark:text-gray-300 font-medium">
+                  <span className="text-2xl">✓</span>
+                  <span>Downloadable PDF</span>
+                </div>
+              </div>
+
+              <Link 
+                href="/saudi/quiz" 
+                className="inline-block bg-blue-600 text-white px-10 py-5 rounded-full hover:bg-blue-700 transition-all font-bold text-xl shadow-2xl hover:shadow-3xl hover:scale-105 transform"
+              >
+                Take the Eligibility Quiz →
+              </Link>
+              
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-6">
+                Takes 2–3 minutes • No signup required
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 border-t border-gray-100 dark:border-gray-800">
           <div className="flex items-start gap-6 mb-8">
             <div className="w-24 h-24 bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 rounded-2xl flex items-center justify-center flex-shrink-0">
               <div className="text-5xl">🎥</div>
@@ -192,14 +236,16 @@ export default function Saudi() {
 
         <section className="py-16 mb-20 border-t border-gray-100 dark:border-gray-800">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Considering a Move?</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Ready to Explore Your Path?</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8 text-lg">
-              If you're a tech professional exploring opportunities in Saudi Arabia, I'm happy 
-              to answer questions or share insights from my experience.
+              Take our 3-minute quiz to discover which Saudi residency or work pathway matches your profile.
             </p>
-            <Link href="/contact" className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all font-medium shadow-sm hover:shadow-md">
-              Contact Me
+            <Link href="/saudi/quiz" className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all font-medium shadow-sm hover:shadow-md mb-4">
+              Take the Quiz →
             </Link>
+            <p className="text-sm text-gray-500 dark:text-gray-500">
+              Or <Link href="/contact" className="text-blue-600 hover:underline">contact me</Link> with specific questions
+            </p>
           </div>
         </section>
       </div>
