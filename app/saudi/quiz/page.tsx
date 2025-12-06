@@ -78,12 +78,29 @@ export default function SaudiQuiz() {
 
   const questions = [
     {
+      id: "region",
+      question: "Where do you currently live or hold citizenship?",
+      helper: "",
+      progressLabel: "Your Location",
+      options: [
+        "UK / Europe",
+        "North America (US / Canada)",
+        "South Asia (India, Pakistan, Bangladesh, Sri Lanka)",
+        "Southeast Asia (Philippines, Malaysia, Indonesia, etc.)",
+        "GCC (UAE, Qatar, Kuwait, Bahrain, Oman)",
+        "Africa",
+        "Other"
+      ]
+    },
+
+    {
       id: "industry",
       question: "What is your industry or professional field?",
       helper: "Choose the field that best represents your current role or expertise.",
       progressLabel: "About Your Profession",
       isIndustryQuestion: true
     },
+    
     {
       id: "jobLevel",
       question: "What is your current job level?",
@@ -824,7 +841,7 @@ export default function SaudiQuiz() {
             />
           </div>
           <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">
-            Step {currentQuestion + 1} of 16 · {currentQ.progressLabel}
+            Step {currentQuestion + 1} of 17 · {currentQ.progressLabel}
           </p>
         </div>
 

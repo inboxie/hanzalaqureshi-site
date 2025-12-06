@@ -9,7 +9,7 @@ export default function Privacy() {
         </Link>
 
         <h1 className="text-5xl font-bold mb-6 text-gray-900 dark:text-white">Privacy Policy</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-500 mb-12">Last updated: December 6, 2024</p>
+        <p className="text-sm text-gray-500 dark:text-gray-500 mb-12">Last updated: December 6, 2025</p>
 
         <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
           <section>
