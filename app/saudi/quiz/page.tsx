@@ -788,7 +788,7 @@ export default function SaudiQuiz() {
               
               <label className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-400">
                 <input type="checkbox" required className="mt-1" />
-                <span>I agree to receive my personalized report and occasional updates about Saudi relocation.</span>
+                <span>I agree to receive my personalized report and occasional updates about Saudi relocation. <Link href="/privacy" className="text-blue-600 hover:underline">Privacy Policy</Link></span>
               </label>
 
               <button
