@@ -13,6 +13,11 @@ export default function SaudiQuiz() {
   const [generating, setGenerating] = useState(false);
   const [pdfUrl, setPdfUrl] = useState("");
   const [result, setResult] = useState<string>("");
+  const trackEvent = (eventName: string, eventParams?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, eventParams);
+    }
+  };
   const [showSkipMessage, setShowSkipMessage] = useState(false);
 
   const industryCategories = [
@@ -494,6 +499,7 @@ export default function SaudiQuiz() {
     } else {
       const finalResult = calculateResult();
       setResult(finalResult);
+      trackEvent('quiz_completed', { outcome: finalResult });
       setShowSummary(true);
     }
   };
@@ -531,6 +537,7 @@ export default function SaudiQuiz() {
 
       const pdfPath = REPORT_MAP[result] || "/reports/explore.pdf";
       setPdfUrl(pdfPath);
+      trackEvent('quiz_email_submitted', { outcome: result });
 
     } catch (error) {
       console.error('Error:', error);
@@ -564,7 +571,10 @@ export default function SaudiQuiz() {
             </p>
 
             <button
-              onClick={() => setStarted(true)}
+              onClick={() => {
+                setStarted(true);
+                trackEvent('quiz_started');
+              }}
               className="bg-blue-600 text-white px-10 py-5 rounded-full hover:bg-blue-700 transition-all font-bold text-xl shadow-lg hover:shadow-xl mb-4"
             >
               Start the Assessment →
